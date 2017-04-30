@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Lab8</a>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Главная</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="About">Информация</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Contact">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+  
+        
+            @RenderSection("info", false)
+  
+        @RenderBody()
+        <hr />
+        <footer>
+            @RenderSection("key")
+            <p id="date"></p>
+        </footer>
+    </div>
+ 
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("names", false)
+</body>
+</html>
